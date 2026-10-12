@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7-Day Enquiry Recovery Sprint for Wedding Photographers | AI Wedding Enquiry Recovery</title>
+<meta name="description" content="I organise your open wedding enquiries into one tracker and write the follow-up messages in your own tone. 7 days. Rs 799 flat. No software to buy.">
+<meta name="theme-color" content="#7C2D4A">
+<meta property="og:title" content="7-Day Enquiry Recovery Sprint — Rs 799">
+<meta property="og:description" content="Up to 15 open enquiries organised, up to 30 personalised follow-up drafts written. You send every message. 7 days.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../04-brand-and-sales/logo-mark.svg" type="image/svg+xml">
+<style>
+  /* ---------- tokens ---------- */
+  :root{
+    --rose:#7C2D4A; --rose-soft:#F3E8EE; --rose-dark:#5E2038;
+    --gold:#C99A4B; --ink:#1F2A37; --muted:#6B7280;
+    --cream:#FBF7F4; --line:#E7DED8; --white:#fff;
+    --green:#12703A; --green-bg:#DCF5E3; --red:#B91C1C; --red-bg:#FDE2E1;
+    --radius:14px; --shadow:0 1px 2px rgba(31,42,55,.06),0 8px 24px rgba(31,42,55,.06);
+    --serif:Georgia,'Playfair Display','Times New Roman',serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);
+       line-height:1.6;-webkit-font-smoothing:antialiased}
+  img,svg{max-width:100%;display:block}
+  a{color:var(--rose)}
+  .wrap{width:min(1080px,92vw);margin-inline:auto}
+  h1,h2,h3{font-family:var(--serif);color:var(--rose);line-height:1.2;margin:0 0 .5em}
+  h1{font-size:clamp(1.9rem,4.6vw,3rem);letter-spacing:-.01em}
+  h2{font-size:clamp(1.4rem,2.8vw,2rem)}
+  h3{font-size:1.1rem;font-family:var(--sans);font-weight:700;color:var(--ink)}
+  p{margin:0 0 1rem}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+           font-weight:700;margin-bottom:.6rem}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:30;background:rgba(251,247,244,.92);
+         backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--rose);
+         font-family:var(--serif);font-weight:700;font-size:1.05rem;line-height:1.1}
+  .brand svg{width:38px;height:38px;flex:none}
+  nav{display:flex;gap:1.1rem;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:500}
+  nav a:hover{color:var(--rose)}
+  .btn{display:inline-block;background:var(--rose);color:#fff;text-decoration:none;
+       padding:.72rem 1.2rem;border-radius:999px;font-weight:600;font-size:.95rem;
+       border:0;cursor:pointer;transition:transform .12s ease,background .15s ease}
+  .btn:hover{background:var(--rose-dark);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--rose);border:1.5px solid var(--rose)}
+  .btn.ghost:hover{background:var(--rose-soft)}
+  @media(max-width:760px){nav .hide-sm{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(2rem,6vw,4rem) 0 1rem}
+  .hero-grid{display:grid;gap:2.4rem;grid-template-columns:1.15fr .85fr;align-items:start}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  .lead{font-size:1.12rem;max-width:44ch}
+  .price-row{display:flex;align-items:baseline;gap:.65rem;margin:1.4rem 0 .4rem;flex-wrap:wrap}
+  .price{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--rose)}
+  .pill{background:var(--rose-soft);color:var(--rose);border-radius:999px;
+        padding:.22rem .7rem;font-size:.8rem;font-weight:700}
+  .cta-row{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+  .trust{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.45rem}
+  .trust li{display:flex;gap:.55rem;align-items:flex-start;font-size:.94rem}
+  .tick{color:var(--green);font-weight:800;flex:none}
+
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+        padding:1.2rem 1.25rem;box-shadow:var(--shadow)}
+  .card h3{margin-top:0}
+  .card.tint{background:var(--white);border-top:4px solid var(--gold)}
+
+  /* ---------- sections ---------- */
+  section{padding:clamp(2.2rem,5vw,3.4rem) 0}
+  .band{background:var(--white);border-block:1px solid var(--line)}
+  .grid-3{display:grid;gap:1.1rem;grid-template-columns:repeat(3,1fr)}
+  .grid-2{display:grid;gap:1.1rem;grid-template-columns:repeat(2,1fr)}
+  @media(max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}}
+
+  .num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--rose);
+       color:#fff;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex:none}
+  .step{display:flex;gap:.85rem;align-items:flex-start}
+
+  /* ---------- tracker preview ---------- */
+  .sheet{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
+         box-shadow:var(--shadow)}
+  .sheet table{width:100%;border-collapse:collapse;font-size:.83rem}
+  .sheet th{background:var(--rose);color:#fff;text-align:left;padding:.55rem .6rem;font-weight:600;
+            font-size:.76rem;letter-spacing:.02em}
+  .sheet td{padding:.5rem .6rem;border-top:1px solid var(--line);vertical-align:top}
+  .sheet tr.overdue td{background:var(--red-bg)}
+  .sheet tr.newq td{background:#E3F0FD}
+  .sheet tr.booked td{background:var(--green-bg)}
+  .tag{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.72rem;font-weight:700;
+       background:var(--rose-soft);color:var(--rose);white-space:nowrap}
+  .tag.red{background:var(--red-bg);color:var(--red)}
+  .tag.green{background:var(--green-bg);color:var(--green)}
+  .tag.grey{background:#F1F2F4;color:var(--muted)}
+  .scrollx{overflow-x:auto}
+  .caption{font-size:.82rem;color:var(--muted);margin-top:.6rem}
+
+  /* ---------- faq ---------- */
+  details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+          padding:.95rem 1.1rem;margin-bottom:.7rem}
+  details[open]{border-color:var(--rose)}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+';color:var(--rose);font-weight:700}
+  details[open] summary::after{content:'–'}
+  details p{margin:.7rem 0 0;color:#374151}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:#D7DCE2;padding:2.4rem 0 2rem;margin-top:2rem}
+  footer h3{color:#fff}
+  footer a{color:#F0C9D8}
+  .foot-grid{display:grid;gap:1.6rem;grid-template-columns:1.3fr 1fr 1fr}
+  @media(max-width:820px){.foot-grid{grid-template-columns:1fr}}
+  .disclaimer{border-top:1px solid #37414F;margin-top:1.6rem;padding-top:1.2rem;font-size:.84rem;color:#9AA5B1}
+
+  .note{background:var(--rose-soft);border-left:4px solid var(--rose);border-radius:0 var(--radius) var(--radius) 0;
+        padding:.9rem 1.1rem;font-size:.95rem}
+  .warn{background:var(--red-bg);border-left:4px solid var(--red);border-radius:0 var(--radius) var(--radius) 0;
+        padding:.9rem 1.1rem;font-size:.95rem}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 176 176" aria-hidden="true">
+        <rect width="176" height="176" rx="28" fill="#FBF7F4"/>
+        <circle cx="88" cy="90" r="58" fill="none" stroke="#7C2D4A" stroke-width="7"/>
+        <rect x="48" y="50" width="72" height="62" rx="16" fill="#7C2D4A"/>
+        <path d="M62 110 L56 130 L92 110 Z" fill="#7C2D4A"/>
+        <circle cx="84" cy="81" r="15" fill="none" stroke="#FBF7F4" stroke-width="6"/>
+        <circle cx="136" cy="46" r="12" fill="#C99A4B" stroke="#FBF7F4" stroke-width="4"/>
+      </svg>
+      <span>AI Wedding<br>Enquiry Recovery</span>
+    </a>
+    <nav>
+      <a href="#what" class="hide-sm">What you get</a>
+      <a href="#how" class="hide-sm">How it works</a>
+      <a href="#sample" class="hide-sm">See the sample</a>
+      <a href="#faq" class="hide-sm">FAQ</a>
+      <a class="btn" href="#start">Start — ₹799</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">For independent wedding photographers in India</div>
+      <h1>Every enquiry answered.<br>Every follow-up done.</h1>
+      <p class="lead">
+        Your enquiries arrive on Instagram, WhatsApp, your website and portals. Replies go out,
+        quotes go out — and then the follow-ups quietly disappear when the season gets busy.
+      </p>
+      <p class="lead">
+        In <strong>7 days</strong>, I put up to <strong>15 of your open enquiries</strong> into one
+        tracker with a clear next action for each — and write up to <strong>30 personalised
+        follow-up messages</strong> in your own tone. You just read, approve and send.
+      </p>
+
+      <div class="price-row">
+        <span class="price">₹799</span>
+        <span class="pill">7-day sprint</span>
+        <span class="pill">No software to buy</span>
+      </div>
+      <p class="small muted">₹400 to start · ₹399 on handover · One revision round included</p>
+
+      <div class="cta-row">
+        <a class="btn" href="#start">Start the sprint</a>
+        <a class="btn ghost" href="#sample">See the sample first</a>
+      </div>
+
+      <ul class="trust">
+        <li><span class="tick">✓</span><span><strong>You send every message.</strong> I never contact your couples.</span></li>
+        <li><span class="tick">✓</span><span><strong>I'm not a photographer</strong> — I'm the person who does the sorting and drafting.</span></li>
+        <li><span class="tick">✓</span><span><strong>No leads, no ads, no automation.</strong> I organise the enquiries you already have.</span></li>
+        <li><span class="tick">✓</span><span><strong>No promise of bookings or revenue.</strong> Only the work, done properly, in 7 days.</span></li>
+      </ul>
+    </div>
+
+    <div class="card tint">
+      <h3>The 20-second version</h3>
+      <p class="small">Up to 15 open enquiries organised into one tracker — each with a status, a next
+        action and a follow-up date, with overdue ones flagging themselves in red.</p>
+      <p class="small">Up to 30 follow-up drafts written in your voice, tagged to the enquiry they
+        belong to, so sending takes 30 seconds.</p>
+      <p class="small">Plus the workflow, a handover walkthrough, and a check-in at day 14.</p>
+      <p class="small muted" style="margin-bottom:0">
+        <strong>Excluded:</strong> lead generation · messaging your couples · CRM setup · editing ·
+        any guarantee of bookings.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <div class="eyebrow">The part that slips</div>
+        <h2>Nobody forgets on purpose</h2>
+        <p>A couple enquires on a shoot day. The reply goes out three days later. The quote goes out
+          the week after. Then a three-day wedding happens, and by the time you look up, you genuinely
+          don't know who is still waiting for an answer.</p>
+        <p>It isn't a discipline problem. It's that the details live in five different apps and no
+          single place shows you the next move.</p>
+      </div>
+      <div class="card">
+        <h3>What I found talking to studios</h3>
+        <p class="small">Across the studios I've spoken to, the same pattern appears:</p>
+        <ul class="small" style="padding-left:1.1rem;margin:0 0 .6rem">
+          <li>Enquiries scattered across Instagram, WhatsApp, a website form and sometimes a portal</li>
+          <li>Quotes sent, then silence — and no follow-up because "it feels like begging"</li>
+          <li>No single number for <em>how many enquiries are actually open right now</em></li>
+          <li>Plenty of willingness to spend money on leads, very little spent on converting the ones already coming in</li>
+        </ul>
+        <p class="small muted" style="margin-bottom:0">These are patterns from conversations, not a survey.
+          Your situation may be different — that's worth finding out before you pay anything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section id="what">
+  <div class="wrap">
+    <div class="eyebrow">The deliverables</div>
+    <h2>What ₹799 gets you</h2>
+    <div class="grid-3" style="margin-top:1.6rem">
+      <div class="card">
+        <span class="num">1</span>
+        <h3 style="margin-top:.7rem">Enquiry tracker</h3>
+        <p class="small">Your open enquiries in one Google Sheet: status, next action, follow-up date,
+          priority, automatic overdue flags and a dashboard that counts everything for you.</p>
+      </div>
+      <div class="card">
+        <span class="num">2</span>
+        <h3 style="margin-top:.7rem">Status &amp; next-action guide</h3>
+        <p class="small">A one-page reference explaining every status and what to do in each situation —
+          so you never stare at the sheet wondering "what now?"</p>
+      </div>
+      <div class="card">
+        <span class="num">3</span>
+        <h3 style="margin-top:.7rem">Up to 30 follow-up drafts</h3>
+        <p class="small">Written for your actual enquiries, in your tone, referencing the right dates,
+          packages and details. WhatsApp and email versions, ready to copy.</p>
+      </div>
+      <div class="card">
+        <span class="num">4</span>
+        <h3 style="margin-top:.7rem">7-day follow-up workflow</h3>
+        <p class="small">The routine that keeps it alive: a 5-minute daily glance and two 20-minute
+          follow-up blocks a week. Includes the stop rule that protects your reputation.</p>
+      </div>
+      <div class="card">
+        <span class="num">5</span>
+        <h3 style="margin-top:.7rem">Handover guide + walkthrough</h3>
+        <p class="small">A short document plus a 15-minute call or voice note so you can run the whole
+          thing yourself, without me.</p>
+      </div>
+      <div class="card">
+        <span class="num">6</span>
+        <h3 style="margin-top:.7rem">Results summary</h3>
+        <p class="small">After a day-14 check-in, a short factual report using only the numbers
+          <em>you</em> report. No invented figures, ever.</p>
+      </div>
+    </div>
+    <p class="caption">Scope: up to 15 existing enquiries and up to 30 message drafts. More than 15?
+      Add 10 more for +₹399 — optional, quoted in advance.</p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="band">
+  <div class="wrap">
+    <div class="eyebrow">The 7 days</div>
+    <h2>How the sprint runs</h2>
+    <div class="grid-2" style="margin-top:1.6rem">
+      <div class="card">
+        <div class="step"><span class="num">0</span><div><h3>You pay ₹400 and fill a 10-minute form</h3>
+          <p class="small">Up to 15 enquiries (initials only — no phone numbers), your packages, and
+            3–5 messages you've already sent so the drafts sound like you.</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">1–2</span><div><h3>I build the tracker</h3>
+          <p class="small">Every enquiry classified: status, next action, follow-up date, priority.
+            Anything already late is flagged in red on day one.</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">3–4</span><div><h3>Drafts, in two batches</h3>
+          <p class="small">First batch goes to you for approval, then the second batch. You edit,
+            reject or approve anything — it's your voice and your calls.</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">5–6</span><div><h3>Workflow and handover documents</h3>
+          <p class="small">Personalised to your channels and your season, with your two weekly blocks
+            written into the document.</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">7</span><div><h3>Handover and balance</h3>
+          <p class="small">A 15-minute walkthrough. You send your first message while we're on the
+            call. ₹399 balance due at handover.</p></div></div>
+      </div>
+      <div class="card">
+        <div class="step"><span class="num">14</span><div><h3>Check-in and summary</h3>
+          <p class="small">You tell me what happened; I write a short factual summary and three
+            process suggestions. Nothing invented, nothing rounded up.</p></div></div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:1.4rem">
+      <strong>The 7-day clock starts</strong> when I have <em>both</em> your payment and your completed
+      form. If your input or your approvals take longer, delivery moves by the same amount — that's the
+      only way a 7-day promise stays honest.
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLE ============ -->
+<section id="sample">
+  <div class="wrap">
+    <div class="eyebrow">See it before you pay</div>
+    <h2>A sample of the actual work</h2>
+    <p class="muted" style="max-width:60ch">Below is the format of the tracker with <strong>fictional
+      sample data</strong>. In the full sample file you also get the dashboard, the status guide and a
+      sample day-14 report.</p>
+
+    <div class="scrollx sheet" style="margin-top:1.2rem">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Received</th><th>Client</th><th>Event date</th><th>Status</th>
+            <th>Next action</th><th>Follow-up</th><th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="newq">
+            <td>ENQ-009</td><td>06-Oct</td><td>H. &amp; J.</td><td>12-Mar-27</td>
+            <td><span class="tag">New enquiry</span></td>
+            <td>Reply with welcome message + 3 questions</td>
+            <td><span class="tag red">Overdue</span></td><td>P1 — today</td>
+          </tr>
+          <tr class="overdue">
+            <td>ENQ-001</td><td>02-Sep</td><td>A. &amp; S.</td><td>08-Dec-26</td>
+            <td><span class="tag">Quote sent</span></td>
+            <td>Gentle nudge (no price talk)</td>
+            <td><span class="tag red">Overdue</span></td><td>P1 — today</td>
+          </tr>
+          <tr>
+            <td>ENQ-003</td><td>09-Sep</td><td>M. &amp; K.</td><td>28-Nov-26</td>
+            <td><span class="tag">Call requested</span></td>
+            <td>Confirm call slot</td>
+            <td><span class="tag red">Overdue</span></td><td>P1 — today</td>
+          </tr>
+          <tr>
+            <td>ENQ-004</td><td>14-Sep</td><td>T.</td><td>19-Dec-26</td>
+            <td><span class="tag">Deciding / comparing</span></td>
+            <td>Send portfolio of similar wedding</td>
+            <td>15-Oct</td><td>P2 — this week</td>
+          </tr>
+          <tr class="booked">
+            <td>ENQ-007</td><td>30-Aug</td><td>V. &amp; A.</td><td>15-Nov-26</td>
+            <td><span class="tag green">Booked</span></td>
+            <td>Send booking confirmation + next steps</td>
+            <td>—</td><td>—</td>
+          </tr>
+          <tr>
+            <td>ENQ-006</td><td>11-Aug</td><td>D.</td><td>25-Oct-26</td>
+            <td><span class="tag grey">Dormant — no reply</span></td>
+            <td>Send final follow-up</td>
+            <td>14-Oct</td><td>P3 — when free</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="caption">Rows shown are 6 of the 10 fictional examples in the sample file. Highlighted rows
+      are the ones flagging themselves as overdue or new.</p>
+
+    <div class="grid-2" style="margin-top:1.4rem">
+      <div class="card">
+        <h3>What a draft looks like</h3>
+        <p class="small" style="background:var(--cream);border:1px dashed var(--line);border-radius:10px;padding:.8rem">
+          <em>Hi R., I'd sent the package details on the 18th — in case it got buried in your DMs.
+          Short version: travel and stay for an outstation shoot are charged at actuals, and the album
+          is an optional add-on. If the date is still on, let me know and I'll check availability.
+          If your plans have changed, that's completely fine too — just tell me and I won't keep
+          following up.</em>
+        </p>
+        <p class="small muted" style="margin-bottom:0">Fictional sample. Every draft arrives tagged with
+          the enquiry it belongs to, the suggested send day, and a
+          <strong>“⚠️ check before sending”</strong> line wherever I made an assumption.</p>
+      </div>
+      <div class="card">
+        <h3>What the report won't do</h3>
+        <p class="small">The day-14 summary reports what you tell me: how many replies you got, how many
+          calls were booked, what changed. It states plainly that replies depend on your portfolio,
+          pricing and availability — not on me.</p>
+        <p class="small muted" style="margin-bottom:0">It never invents a number, never claims credit
+          for a booking that started before the sprint, and never claims a percentage improvement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHO IT'S FOR ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="eyebrow">Fit</div>
+    <h2>Who this works for — and who it doesn't</h2>
+    <div class="grid-2" style="margin-top:1.2rem">
+      <div class="card" style="border-top:4px solid var(--green)">
+        <h3>A good fit if…</h3>
+        <ul class="small" style="padding-left:1.1rem;margin:0">
+          <li>You shoot <strong>12+ weddings a year</strong>, solo or in a small team</li>
+          <li>You get roughly <strong>10+ enquiries a month</strong> in season</li>
+          <li>Your enquiries arrive from <strong>two or more channels</strong></li>
+          <li>You've caught yourself thinking <em>"I should have replied to that one"</em></li>
+          <li>You don't want another monthly subscription</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:4px solid var(--red)">
+        <h3>Not a good fit if…</h3>
+        <ul class="small" style="padding-left:1.1rem;margin:0">
+          <li>You get very few enquiries (under ~10 a month) — there's nothing to organise yet</li>
+          <li>Your CRM already shows you the next action for every open enquiry</li>
+          <li>You want someone to <strong>generate leads</strong> or run ads</li>
+          <li>You want someone else to <strong>message your couples</strong></li>
+          <li>You need a guarantee of bookings — no honest person can give you one</li>
+        </ul>
+        <p class="small muted" style="margin:.8rem 0 0">If you're in the second list, tell me and I'll say so
+          rather than take your money.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ START ============ -->
+<section id="start">
+  <div class="wrap">
+    <div class="grid-2" style="align-items:start">
+      <div>
+        <div class="eyebrow">Next step</div>
+        <h2>Start the 7-day sprint</h2>
+        <p>Message me the word <strong>"start"</strong> and I'll send the onboarding form and the payment
+          link. Or ask for the full sample first — that's completely fine too.</p>
+        <div class="cta-row">
+          <!-- REPLACE the href values with your real WhatsApp link and email -->
+          <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%27d%20like%20to%20start%20the%207-Day%20Enquiry%20Recovery%20Sprint.">WhatsApp me</a>
+          <a class="btn ghost" href="mailto:yourname@example.com?subject=Enquiry%20Recovery%20Sprint%20%E2%80%94%20%E2%82%B9799">Email me</a>
+        </div>
+        <p class="small muted" style="margin-top:1rem">
+          Replace the WhatsApp number and email in this file before publishing.
+        </p>
+      </div>
+      <div class="card tint">
+        <h3>Payment terms, plainly</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:.92rem">
+          <tr><td style="padding:.35rem 0">Total</td><td style="text-align:right"><strong>₹799</strong></td></tr>
+          <tr><td style="padding:.35rem 0">Advance</td><td style="text-align:right">₹400</td></tr>
+          <tr><td style="padding:.35rem 0">At handover</td><td style="text-align:right">₹399</td></tr>
+          <tr><td style="padding:.35rem 0">Method</td><td style="text-align:right">UPI</td></tr>
+          <tr><td style="padding:.35rem 0">Invoice</td><td style="text-align:right">Same day (non-GST)</td></tr>
+          <tr><td style="padding:.35rem 0">Revisions</td><td style="text-align:right">One round, free</td></tr>
+          <tr><td style="padding:.35rem 0">Refund</td><td style="text-align:right">Advance refunded if I miss 14 days</td></tr>
+        </table>
+        <p class="small muted" style="margin:1rem 0 0">
+          Privacy: initials only, no phone numbers. I work inside a folder you own, never contact your
+          couples, and delete my working copies within 30 days — confirmed in writing.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="band">
+  <div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <h2>Straight answers</h2>
+
+    <details open>
+      <summary>Are you a photographer?</summary>
+      <p>No, and I won't pretend to be. You're the photographer — I'm the person who sorts the enquiries,
+        decides the next move, and writes the messages. Every draft is something you approve or throw away.</p>
+    </details>
+
+    <details>
+      <summary>Will you contact my couples?</summary>
+      <p>Never. Not once, on any channel. I write the drafts; you read them and send them from your own
+        number. That keeps it your relationship, and it keeps me out of platform and privacy rules around
+        messaging your clients.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to buy any software?</summary>
+      <p>No. It runs on a free Google Sheet and the WhatsApp and Instagram you already use. Nothing to
+        subscribe to, nothing to install.</p>
+    </details>
+
+    <details>
+      <summary>How much time do I need to give you?</summary>
+      <p>About 10 minutes for the form, 20 minutes to look at the drafts twice, and 15 minutes for the
+        handover call. Then about 5 minutes a day to run it.</p>
+    </details>
+
+    <details>
+      <summary>What exactly do you need from me?</summary>
+      <p>Up to 15 open enquiries with <strong>initials or first names only</strong> — no phone numbers, no
+        emails. Your package prices. And 3–5 messages you've already sent to couples, so the drafts sound
+        like you rather than like a robot.</p>
+    </details>
+
+    <details>
+      <summary>Will this get me more bookings?</summary>
+      <p>I don't know, and I won't claim it will. What I can promise is specific: up to 15 enquiries
+        organised with a next action for each, up to 30 personalised drafts, delivered in 7 days. Whether
+        a couple books depends on your portfolio, your pricing, your availability and their decision —
+        that part is yours, and you're better at it than I am.</p>
+    </details>
+
+    <details>
+      <summary>I already use a CRM. Do I need this?</summary>
+      <p>Maybe not. One honest test: open your CRM and check whether you know the next action for the five
+        longest-waiting enquiries. If the answer is yes, you don't need me and I'll tell you so. If the
+        CRM has the data but the follow-ups still aren't happening, that's the problem I fix — alongside
+        whatever you already pay for.</p>
+    </details>
+
+    <details>
+      <summary>Why is it only ₹799?</summary>
+      <p>It's a pilot price. You'd be one of my first clients while I build this, so I'm pricing for honest
+        feedback and a case study as much as for money. Once I have a few delivered clients, the price goes
+        up. If it seems too cheap to be good, ask for the sample and judge the work instead of the price.</p>
+    </details>
+
+    <details>
+      <summary>What if I'm unhappy?</summary>
+      <p>Tell me. One revision round is included free within 5 days of delivery. If I fail to deliver
+        within 14 days for any reason on my side, your advance is refunded in full — it's written into the
+        agreement you'll get before paying.</p>
+    </details>
+
+    <details>
+      <summary>What about my clients' privacy?</summary>
+      <p>Your couples' data stays under your control. I ask for initials only, I work inside a folder you
+        own, I never contact your clients, and I delete my working copies within 30 days and confirm it in
+        writing. If you want your data deleted sooner, one message is enough.</p>
+    </details>
+
+    <details>
+      <summary>Is this a registered company?</summary>
+      <p>No. I'm an individual running a small service, below the GST registration threshold, and I invoice
+        accordingly — a plain invoice, no GST charged. I'd rather tell you plainly than pretend to be
+        bigger than I am.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>AI Wedding Enquiry Recovery</h3>
+        <p class="small">Every enquiry answered. Every follow-up done.</p>
+        <p class="small">A small, honest service for independent wedding photographers in India.
+          Not a lead seller, not a CRM, and not a guarantee of anything except the work.</p>
+      </div>
+      <div>
+        <h3 class="small" style="font-family:var(--sans);font-size:.95rem">Sections</h3>
+        <p class="small" style="line-height:2">
+          <a href="#what">What you get</a><br>
+          <a href="#how">How it works</a><br>
+          <a href="#sample">See the sample</a><br>
+          <a href="#faq">FAQ</a>
+        </p>
+      </div>
+      <div>
+        <h3 class="small" style="font-family:var(--sans);font-size:.95rem">Contact</h3>
+        <p class="small" style="line-height:2">
+          <!-- REPLACE with your real details -->
+          <a href="https://wa.me/91XXXXXXXXXX">WhatsApp: +91 XXXX XXX XXX</a><br>
+          <a href="mailto:yourname@example.com">yourname@example.com</a><br>
+          Based in [your city], working across India
+        </p>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <p><strong>Honest disclosures.</strong> This is a new, individual-run service with no client
+      testimonials yet. The tracker examples shown on this page are fictional sample data. This service
+      does not generate leads, does not contact your clients, and does not guarantee bookings, replies or
+      revenue. All prices are in Indian Rupees. You retain responsibility for the messages you send and
+      for the data you hold.</p>
+      <p style="margin-bottom:0">© <span id="yr">2026</span> AI Wedding Enquiry Recovery. Replace the
+      placeholders in this file (WhatsApp number, email, city) before publishing.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // close other FAQs when one opens (nicer on mobile)
+  document.querySelectorAll('details').forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (d.open) {
+        document.querySelectorAll('details').forEach(function (o) {
+          if (o !== d) o.open = false;
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
