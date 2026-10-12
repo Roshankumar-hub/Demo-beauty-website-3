@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200" role="img" aria-label="AI Wedding Enquiry Recovery">
+  <title>AI Wedding Enquiry Recovery - logo lockup</title>
+  <desc>Speech bubble inside a wedding ring, with a gold unread-notification dot, beside the business name. Concept logo.</desc>
+  <g transform="translate(6,18)">
+    <circle cx="88" cy="90" r="58" fill="none" stroke="#7C2D4A" stroke-width="7"/>
+    <rect x="48" y="50" width="72" height="62" rx="16" fill="#7C2D4A"/>
+    <path d="M62 110 L56 130 L92 110 Z" fill="#7C2D4A"/>
+    <circle cx="84" cy="81" r="15" fill="none" stroke="#FBF7F4" stroke-width="6"/>
+    <circle cx="136" cy="46" r="12" fill="#C99A4B" stroke="#FBF7F4" stroke-width="4"/>
+  </g>
+  <g font-family="Georgia, 'Playfair Display', 'Times New Roman', serif" fill="#7C2D4A">
+    <text x="196" y="92" font-size="42" font-weight="700" letter-spacing="0.5">AI Wedding</text>
+    <text x="196" y="136" font-size="42" font-weight="700" letter-spacing="0.5">Enquiry Recovery</text>
+  </g>
+  <text x="198" y="166" font-family="Inter, system-ui, 'Segoe UI', Arial, sans-serif"
+        font-size="15" fill="#6B7280" letter-spacing="0.3">Every enquiry answered. Every follow-up done.</text>
+</svg>

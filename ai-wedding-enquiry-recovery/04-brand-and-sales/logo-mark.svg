@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 176" width="176" height="176" role="img" aria-label="AI Wedding Enquiry Recovery mark">
+  <title>AI Wedding Enquiry Recovery - mark</title>
+  <desc>Speech bubble inside a wedding ring, with a gold unread-notification dot. Concept logo mark for profile pictures and favicons.</desc>
+  <rect width="176" height="176" fill="#FBF7F4"/>
+  <!-- wedding ring / camera lens -->
+  <circle cx="88" cy="90" r="58" fill="none" stroke="#7C2D4A" stroke-width="7"/>
+  <!-- speech bubble + tail -->
+  <rect x="48" y="50" width="72" height="62" rx="16" fill="#7C2D4A"/>
+  <path d="M62 110 L56 130 L92 110 Z" fill="#7C2D4A"/>
+  <!-- inner band -->
+  <circle cx="84" cy="81" r="15" fill="none" stroke="#FBF7F4" stroke-width="6"/>
+  <!-- unread notification -->
+  <circle cx="136" cy="46" r="12" fill="#C99A4B" stroke="#FBF7F4" stroke-width="4"/>
+</svg>
